@@ -1,23 +1,25 @@
 # Next.js + React Monorepo Seed with Tailwind, Sass, and TypeScript
-```
+
+`````
 
 ````bash
 # Pnpm Installation (if not yet installed)
 npm install -g pnpm
-```
+`````
 
-````md
+```md
 ## Step-by-Step Monorepo Setup
+
 This guide helps you set up a pnpm-based monorepo for Next.js apps and shared React libraries.
 ```
 
-````bash
+```bash
 # Step 1: Initialize Root Workspace
 cd nextjs-react-seed
 pnpm init
 ```
 
-````yaml
+`````yaml
 # Create pnpm-workspace.yaml at the root
 packages:
   - 'apps/*'
@@ -396,3 +398,14 @@ pnpm build --filter common-lib
 pnpm build --filter main-app
 ```
 
+# TODO
+- add prettier
+- add main layout with css grid, include header, footer, aside, body
+- turn it to responsive on mobile view should looks good
+- add a hamburger icon which appear only when the ui breakpoint is smaller than xs
+- show menu items on overlay when click to hamburger icon
+`````
+
+```
+
+```
