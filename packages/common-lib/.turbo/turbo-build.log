@@ -1,0 +1,23 @@
+
+
+> common-lib@1.0.0 build /Users/kovarilaszlo/src/react/pilot/nextjs-react-seed/packages/common-lib
+> tsup
+
+[34mCLI[39m Building entry: src/index.ts
+[34mCLI[39m Using tsconfig: tsconfig.json
+[34mCLI[39m tsup v8.5.0
+[34mCLI[39m Using tsup config: /Users/kovarilaszlo/src/react/pilot/nextjs-react-seed/packages/common-lib/tsup.config.ts
+[34mCLI[39m Target: es2022
+[34mCLI[39m Cleaning output folder
+[34mCJS[39m Build start
+[34mESM[39m Build start
+[32mCJS[39m [1mdist/index.js     [22m[32m127.02 KB[39m
+[32mCJS[39m [1mdist/index.js.map [22m[32m202.34 KB[39m
+[32mCJS[39m ⚡️ Build success in 15ms
+[32mESM[39m [1mdist/index.mjs     [22m[32m126.48 KB[39m
+[32mESM[39m [1mdist/index.mjs.map [22m[32m201.61 KB[39m
+[32mESM[39m ⚡️ Build success in 16ms
+DTS Build start
+DTS ⚡️ Build success in 363ms
+DTS dist/index.d.ts  327.00 B
+DTS dist/index.d.mts 327.00 B

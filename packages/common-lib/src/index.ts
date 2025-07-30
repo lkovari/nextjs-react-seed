@@ -1,0 +1,1 @@
+export { ReactVersion } from './components/version/ReactVersion'
