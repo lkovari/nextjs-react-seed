@@ -1,15 +1,13 @@
-# Kizárás a gyökérszinten
-.turbo/**/*.cookie
-.turbo/**/*.turbo-build.log
-.turbo/cookies/*.cookie
-
-# Kizárás az apps/main-app/ alatt
-apps/main-app/.turbo/
-apps/main-app/.turbo/turbo-build.log
-
-# ignore node_modules and build outputs
+# Általános build/artifact mappák
 node_modules/
 .turbo/
 .next/
 dist/
 out/
+
+# Globálisan ignoráljuk az összes .turbo mappát és azok tartalmát
+**/.turbo/
+**/.turbo/*.cookie
+**/.turbo/**/*.cookie
+**/.turbo/turbo-build.log
+**/.turbo/**/turbo-build.log
