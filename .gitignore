@@ -1,11 +1,11 @@
-# Általános build/artifact mappák
+# all build/artifact related folders
 node_modules/
 .turbo/
 .next/
 dist/
 out/
 
-# Globálisan ignoráljuk az összes .turbo mappát és azok tartalmát
+# ignore globally all .turbo folders and it's content
 **/.turbo/
 **/.turbo/*.cookie
 **/.turbo/**/*.cookie
