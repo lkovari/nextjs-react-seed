@@ -1,5 +1,11 @@
 # all build/artifact related folders
 node_modules/
+packages/common-lib/dist/
+packages/common-lib/node_modules/
+packages/common-lib/.turbo
+apps/main-app/dist/
+apps/main-app/node_modules/
+apps/main-app/.turbo
 .turbo/
 .next/
 dist/
