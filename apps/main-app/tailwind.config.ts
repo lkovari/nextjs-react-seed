@@ -1,4 +1,3 @@
-// apps/main-app/tailwind.config.ts
 import type { Config } from 'tailwindcss';
 
 const config: Config = {
@@ -7,7 +6,7 @@ const config: Config = {
         './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
         './src/components/**/*.{js,ts,jsx,tsx,mdx}',
         './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-        '../../packages/common-lib/src/**/*.{js,ts,jsx,tsx,mdx}', // Hozzáadva a common-lib szkenneléséhez
+        '../../packages/common-lib/src/**/*.{js,ts,jsx,tsx,mdx}',
     ],
     theme: {
         extend: {

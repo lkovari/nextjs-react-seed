@@ -1,4 +1,3 @@
-// src/app/layout.tsx
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
@@ -30,9 +29,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
 function Header() {
   return (
-    <header className="bg-gray-800 dark:bg-gray-900 text-white px-4 py-3 flex items-center justify-between">
-      <MobileMenuButton />
-      <h1 className="text-lg font-semibold">NextJS Playground</h1>
+    <header className="bg-gray-800 dark:bg-gray-900 text-white px-4 py-3 relative">
+      <div className="absolute left-4 top-1/2 -translate-y-1/2 sm:hidden">
+        <MobileMenuButton />
+      </div>
+      <h1 className="text-lg font-semibold text-center">NextJS Playground</h1>
     </header>
   )
 }
