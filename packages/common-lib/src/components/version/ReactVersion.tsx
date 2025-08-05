@@ -1,25 +1,21 @@
-import React, { Component } from 'react';
-import packageJson from '../../../package.json';
+'use client'
 
-type VersionComponentState = {
-    reactVersion: string;
-};
+import { useEffect, useState } from 'react'
+import React from 'react'
 
-export class ReactVersion extends Component<{}, VersionComponentState> {
-  constructor(props: {}) {
-    super(props);
-    this.state = {
-      reactVersion: packageJson.devDependencies.react ?? 'unknown'
-    };
-  }
+export const ReactVersion = () => {
+  const [reactVersion, setReactVersion] = useState('unknown')
 
-  render() {
-    const reactVersion = this.state.reactVersion;
+  useEffect(() => {
+    const version = React.version ?? 'unknown'
+    setReactVersion(version)
+  }, [])
 
-    return (
-      <div className="text-sm text-gray-700">
-        <p>React version: <strong>{reactVersion}</strong></p>
-      </div>
-    );
-  }
+  return (
+    <div className="text-sm text-gray-700">
+      <p>
+        React version: <strong>{reactVersion}</strong>
+      </p>
+    </div>
+  )
 }
