@@ -1,1 +1,15 @@
-node_modules
+# Kizárás a gyökérszinten
+.turbo/**/*.cookie
+.turbo/**/*.turbo-build.log
+.turbo/cookies/*.cookie
+
+# Kizárás az apps/main-app/ alatt
+apps/main-app/.turbo/
+apps/main-app/.turbo/turbo-build.log
+
+# ignore node_modules and build outputs
+node_modules/
+.turbo/
+.next/
+dist/
+out/
