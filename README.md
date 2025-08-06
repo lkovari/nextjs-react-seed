@@ -4,6 +4,10 @@ With **Tailwind CSS**, **Sass**, **TypeScript**, and **Turborepo**
 
 ---
 
+I chose **Turborepo** because it provides the flexibility to easily extend this workspace with additional apps or libraries in the future.
+
+---
+
 ## ✅ TODO
 
 ### 🔧 Fixes & Improvements
