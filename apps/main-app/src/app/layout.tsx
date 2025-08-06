@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className='max-h-[100dvh]'>
+    <html lang="en">
       <body className={`${inter.className} flex flex-col min-h-[100dvh] bg-white text-black dark:bg-black dark:text-white h-[calc(var(--vh)_*_100)]`}>
         <Header />
         <div className="flex flex-1">
@@ -32,7 +32,7 @@ function Header() {
       <div className="absolute left-4 top-1/2 -translate-y-1/2 sm:hidden">
         <MobileMenuButton />
       </div>
-      <h1 className="text-lg font-semibold text-center">NextJS Playground</h1>
+      <h1 className="text-lg font-semibold text-center"><a href='https://nextjs.org'>Next.js</a> Playground</h1>
     </header>
   )
 }
@@ -40,7 +40,7 @@ function Header() {
 function Footer() {
   return (
     <footer className="bg-gray-100 dark:bg-gray-800 text-center py-2 text-sm text-gray-800 dark:text-gray-300 mt-auto">
-      © 2025 L. Kovari — Built with Next.js
+      © 2025 László Kővári — Built with <a href='https://nextjs.org' >Next.js</a>
     </footer>
   )
 }

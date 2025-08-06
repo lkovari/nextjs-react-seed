@@ -5,7 +5,7 @@ export default function Sidebar({ mobile = false }: { mobile?: boolean }) {
     <aside
       className={`${
         mobile
-          ? 'absolute left-0 top-12 z-50 w-60 p-4 shadow-md'
+          ? 'absolute left-0 top-24 z-50 w-60 p-4 shadow-md'
           : 'hidden sm:block w-60 p-4'
       } bg-gray-100 dark:bg-gray-900 text-black dark:text-white`}
     >
