@@ -20,10 +20,11 @@ I chose **Turborepo** because it provides the flexibility to easily extend this 
 - [ ] Hooks (Next.js + React)
 - [ ] Validation (Zod)
 - [ ] Data handling via state management (Zustand)
-- [ ] Deep dive into Turborepo
-- [ ] Exploring `shadcn/ui` through practical examples
-- [ ] Exploring `radix-ui` through practical examples
-- [ ] Comparing `biome.js` vs `eslint`
+- [ ] Deep dive into Turborepo features and usage
+- [ ] Exploring `shadcn/ui` through examples
+- [ ] Exploring `radix-ui` through examples
+- [ ] Comparison: `biome.js` vs `eslint`
+- [ ] Integrating `react-hook-form` with `@hookform/resolvers`
 
 ### 📄 Content Implementation
 
