@@ -10,7 +10,7 @@ export default function MobileMenuButton() {
     <div className="sm:hidden">
       <button
         onClick={() => setOpen(!open)}
-        className="text-white focus:outline-none mr-2"
+        className="text-fuchsia-600 focus:outline-none mr-2"
       >
         ☰
       </button>

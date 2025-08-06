@@ -12,10 +12,8 @@ export const ReactVersion = () => {
   }, [])
 
   return (
-    <div className="text-sm text-gray-700">
-      <p>
-        React version: <strong>{reactVersion}</strong>
-      </p>
+    <div style={{ color: 'magenta', fontSize: '10px' }}>
+      {reactVersion}
     </div>
   )
 }

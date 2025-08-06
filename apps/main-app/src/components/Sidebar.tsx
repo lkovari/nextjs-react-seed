@@ -1,3 +1,4 @@
+import { ReactVersion } from 'common-lib'
 import Link from 'next/link'
 
 export default function Sidebar({ mobile = false }: { mobile?: boolean }) {
@@ -29,6 +30,9 @@ export default function Sidebar({ mobile = false }: { mobile?: boolean }) {
           LKovariHome
         </a>
       </nav>
+      <div className='pt-4'>
+        <ReactVersion />
+      </div>
     </aside>
   )
 }
