@@ -13,8 +13,8 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} flex flex-col min-h-screen bg-white text-black dark:bg-black dark:text-white`}>
+    <html lang="en" className='max-h-[100dvh]'>
+      <body className={`${inter.className} flex flex-col min-h-screen bg-white text-black dark:bg-black dark:text-white h-[calc(var(--vh)_*_100)]`}>
         <Header />
         <div className="flex flex-1">
           <Sidebar />
