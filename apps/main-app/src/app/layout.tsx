@@ -35,7 +35,7 @@ function Header() {
       </div>
 
       <div className="absolute right-4 top-1/2 -translate-y-1/2">
-        <p className="text-[xx-small]">{lastUpdateDate}</p>
+        <p className="text-[0.5rem]">{lastUpdateDate}</p>
       </div>
 
       <div className="flex justify-center items-center gap-2">
