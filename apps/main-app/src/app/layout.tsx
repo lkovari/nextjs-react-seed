@@ -3,9 +3,10 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import MobileMenuButton from '../components/MobileMenuButton'
 import Sidebar from '../components/Sidebar'
+import Image from 'next/image'
 
 const inter = Inter({ subsets: ['latin'] })
-
+const lastUpdateDate = "2025.08.06 07:47 PM"
 export const metadata: Metadata = {
   title: 'NextJS Playground',
   description: 'Demo project',
@@ -32,7 +33,25 @@ function Header() {
       <div className="absolute left-4 top-1/2 -translate-y-1/2 sm:hidden">
         <MobileMenuButton />
       </div>
-      <h1 className="text-lg font-semibold text-center"><a href='https://nextjs.org'>Next.js</a> Playground</h1>
+
+      <div className="absolute right-4 top-1/2 -translate-y-1/2">
+        <p className="text-[xx-small]">{lastUpdateDate}</p>
+      </div>
+
+      <div className="flex justify-center items-center gap-2">
+        <a href="https://github.com/lkovari/nextjs-react-seed">
+          <Image
+            src="/github-mark-white.svg"
+            width={16}
+            height={16}
+            alt="GitHub logo"
+            className="object-contain"
+          />
+        </a>
+        <h1 className="text-lg font-semibold text-center">
+          <a href="https://nextjs.org">Next.js</a> Playground
+        </h1>
+      </div>
     </header>
   )
 }
