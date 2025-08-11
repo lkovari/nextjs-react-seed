@@ -19,7 +19,6 @@
   }
 }
 
-
 body {
   background: var(--background);
   color: var(--foreground);
@@ -38,24 +37,25 @@ a {
   color: royalblue;
   text-decoration: none;
 }
-/* Menu alap háttérszín napszak szerint */
+/* --- MENÜ LINKEK --- */
+
+/* Alap stílus (háttér nélkül, csak nem aktív elemek kapnak hover hátteret) */
 .menu-link {
-  /* alap közös stílus */
-  @apply flex h-[48px] grow items-center justify-center gap-2 rounded-md p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3;
+  @apply flex h-[22px] grow items-center justify-center gap-2 rounded-md p-3 text-sm font-medium md:flex-none md:justify-start md:p-2 md:px-3;
 }
 
-/* Nappal – fekete háttér, fehér szöveg */
-@media (prefers-color-scheme: light) {
-  .menu-link {
-    background-color: black;
-    color: white;
-  }
+/* Hover csak nem aktív elemnél */
+.menu-link:not(.menu-link--active):hover {
+  @apply bg-sky-100 text-blue-600;
 }
 
-/* Éjjel – fehér háttér, fekete szöveg */
-@media (prefers-color-scheme: dark) {
-  .menu-link {
-    background-color: white;
-    color: black;
-  }
+/* Aktív elem – csak magenta szöveg, nincs háttér */
+.menu-link--active {
+  @apply text-[#E20074];
+  background-color: transparent !important;
+}
+/* Aktív elem hoverkor se változzon */
+.menu-link--active:hover {
+  background-color: transparent !important;
+  color: #E20074 !important;
 }
