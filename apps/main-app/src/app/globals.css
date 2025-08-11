@@ -38,3 +38,24 @@ a {
   color: royalblue;
   text-decoration: none;
 }
+/* Menu alap háttérszín napszak szerint */
+.menu-link {
+  /* alap közös stílus */
+  @apply flex h-[48px] grow items-center justify-center gap-2 rounded-md p-3 text-sm font-medium hover:bg-sky-100 hover:text-blue-600 md:flex-none md:justify-start md:p-2 md:px-3;
+}
+
+/* Nappal – fekete háttér, fehér szöveg */
+@media (prefers-color-scheme: light) {
+  .menu-link {
+    background-color: black;
+    color: white;
+  }
+}
+
+/* Éjjel – fehér háttér, fekete szöveg */
+@media (prefers-color-scheme: dark) {
+  .menu-link {
+    background-color: white;
+    color: black;
+  }
+}

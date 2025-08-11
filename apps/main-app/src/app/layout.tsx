@@ -6,16 +6,22 @@ import Sidebar from '../components/Sidebar'
 import Image from 'next/image'
 
 const inter = Inter({ subsets: ['latin'] })
-const lastUpdateDate = "2025.08.06 07:47 PM"
+const lastUpdateDate = "2025.08.11. 04:14 PM";
 export const metadata: Metadata = {
   title: 'NextJS Playground',
   description: 'Demo project',
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex flex-col min-h-[100dvh] bg-white text-black dark:bg-black dark:text-white h-[calc(var(--vh)_*_100)]`}>
+      <body
+        className={`${inter.className} antialiased flex flex-col min-h-[100dvh] bg-white text-black dark:bg-black dark:text-white h-[calc(var(--vh)_*_100)]`}
+      >
         <Header />
         <div className="flex flex-1">
           <Sidebar />
@@ -24,7 +30,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Footer />
       </body>
     </html>
-  )
+  );
 }
 
 function Header() {
@@ -42,10 +48,17 @@ function Header() {
         <a href="https://github.com/lkovari/nextjs-react-seed">
           <Image
             src="/github-mark-white.svg"
+            width={32}
+            height={32}
+            alt="GitHub logo"
+            className="hidden md:block object-contain"
+          />
+          <Image
+            src="/github-mark-white.svg"
             width={16}
             height={16}
             alt="GitHub logo"
-            className="object-contain"
+            className="block md:hidden object-contain"
           />
         </a>
         <h1 className="text-lg font-semibold text-center">
@@ -53,7 +66,7 @@ function Header() {
         </h1>
       </div>
     </header>
-  )
+  );
 }
 
 function Footer() {

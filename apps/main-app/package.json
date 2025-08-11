@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
+    "clsx": "^2.1.1",
+    "common-lib": "workspace:*",
     "next": "15.4.5",
     "react": "19.1.0",
     "react-dom": "19.1.0",
-    "sass": "^1.89.2",
-    "common-lib": "workspace:*"
+    "sass": "^1.89.2"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
