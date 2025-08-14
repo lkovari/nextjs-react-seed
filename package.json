@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "clean": "pnpm -r exec rm -rf dist node_modules/.cache",
+    "clean": "pnpm -r exec rimraf dist node_modules/.cache",
     "dev": "turbo run dev",
     "build": "turbo run build",
     "build:common": "pnpm build --filter common-lib",
@@ -20,7 +20,11 @@
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^8.39.0",
     "@typescript-eslint/parser": "^8.39.0",
+    "autoprefixer": "^10.4.21",
     "eslint": "^9.33.0",
+    "postcss": "^8.5.6",
+    "rimraf": "^6.0.1",
+    "tailwindcss": "^4.1.11",
     "turbo": "^2.5.5"
   },
   "dependencies": {
