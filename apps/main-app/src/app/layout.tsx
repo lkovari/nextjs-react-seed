@@ -1,16 +1,16 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import MobileMenuButton from '../components/MobileMenuButton'
-import Sidebar from '../components/Sidebar'
-import Image from 'next/image'
+import "./globals.css";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import MobileMenuButton from "../components/MobileMenuButton";
+import Sidebar from "../components/Sidebar";
+import Image from "next/image";
 
-const inter = Inter({ subsets: ['latin'] })
-const lastUpdateDate = "2025.08.11. 04:14 PM";
+const inter = Inter({ subsets: ["latin"] });
+const lastUpdateDate = "2025.08.17. 01:56 AM";
 export const metadata: Metadata = {
-  title: 'NextJS Playground',
-  description: 'Demo project',
-}
+  title: "NextJS Playground",
+  description: "Demo project",
+};
 
 export default function RootLayout({
   children,
@@ -72,7 +72,7 @@ function Header() {
 function Footer() {
   return (
     <footer className="bg-gray-100 dark:bg-gray-800 text-center py-2 text-sm text-gray-800 dark:text-gray-300 mt-auto">
-      © 2025 László Kővári — Built with <a href='https://nextjs.org' >Next.js</a>
+      © 2025 László Kővári — Built with <a href="https://nextjs.org">Next.js</a>
     </footer>
-  )
+  );
 }

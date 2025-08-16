@@ -17,6 +17,8 @@ const config: Config = {
             },
         },
     },
-    plugins: [],
-};
+    plugins: [require("@tailwindcss/forms")],
+} satisfies Config;
+
+/** @type {import('postcss-load-config').Config} */
 export default config;

@@ -32,8 +32,5 @@ I chose **Turborepo** because it provides the flexibility to easily extend this 
 - [ ] Comparison: `biome.js` vs `eslint`
 - [ ] Integrating `react-hook-form` with `@hookform/resolvers`
 
-### 📄 Content Implementation
-
-- [ ] Implement Sandbox submenu pages content
 
 ---

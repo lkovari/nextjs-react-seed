@@ -5,6 +5,7 @@ import {
   CubeIcon,
   CogIcon,
   QuestionMarkCircleIcon,
+  DocumentCheckIcon,
 } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import Link from "next/link";
@@ -14,6 +15,7 @@ const links = [
   { name: "Data Input", href: "/sandbox/data-input", icon: GiftIcon },
   { name: "Cross Field", href: "/sandbox/cross-field", icon: CubeIcon },
   { name: "Controls", href: "/sandbox/controls", icon: CogIcon },
+  { name: "Stepper", href: "/sandbox/stepper", icon: DocumentCheckIcon },
   { name: "Other", href: "/sandbox/other", icon: QuestionMarkCircleIcon },
 ];
 
