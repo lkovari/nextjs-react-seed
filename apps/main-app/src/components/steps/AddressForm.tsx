@@ -31,7 +31,7 @@ export default function AddressForm() {
               errors.houseNumber ? "houseNumber-error" : undefined
             }
             className={inputCls}
-            placeholder="123/A"
+            placeholder="Enter a house #"
           />
           {errors.houseNumber && (
             <p
@@ -54,7 +54,7 @@ export default function AddressForm() {
             aria-invalid={!!errors.street}
             aria-describedby={errors.street ? "street-error" : undefined}
             className={inputCls}
-            placeholder="Main St."
+            placeholder="Enter a Street"
           />
           {errors.street && (
             <p
@@ -77,7 +77,7 @@ export default function AddressForm() {
             aria-invalid={!!errors.city}
             aria-describedby={errors.city ? "city-error" : undefined}
             className={inputCls}
-            placeholder="Budapest"
+            placeholder="Enter a City"
           />
           {errors.city && (
             <p
@@ -100,7 +100,7 @@ export default function AddressForm() {
             aria-invalid={!!errors.zip}
             aria-describedby={errors.zip ? "zip-error" : undefined}
             className={inputCls}
-            placeholder="1011"
+            placeholder="Enter a Zip"
           />
           {errors.zip && (
             <p
@@ -123,7 +123,7 @@ export default function AddressForm() {
             aria-invalid={!!errors.country}
             aria-describedby={errors.country ? "country-error" : undefined}
             className={inputCls}
-            placeholder="Hungary"
+            placeholder="Enter a Country"
           />
           {errors.country && (
             <p

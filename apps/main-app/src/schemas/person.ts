@@ -1,8 +1,14 @@
 import { z } from "zod";
 
 export const personSchema = z.object({
-    firstName: z.string().min(1, "First name is required"),
-    lastName: z.string().min(1, "Last name is required"),
+    firstName: z
+        .string()
+        .min(1, "First name is required")
+        .min(3, "First name must be at least 3 characters"),
+    lastName: z
+        .string()
+        .min(1, "Last name is required")
+        .min(3, "Last name must be at least 3 characters"),
     dob: z.string().min(1, "Date of birth is required"),
     // Keep "" so the Select can show a placeholder when nothing is chosen.
     gender: z.enum(["Female", "Male", "Other"]).optional().or(z.literal("")),

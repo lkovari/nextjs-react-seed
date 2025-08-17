@@ -103,7 +103,7 @@ export default function CarForm() {
             aria-invalid={!!errors.model}
             aria-describedby={errors.model ? "model-error" : undefined}
             className={inputCls}
-            placeholder="Model S"
+            placeholder="Enter Model"
           />
           {errors.model && (
             <p
@@ -128,7 +128,7 @@ export default function CarForm() {
               errors.plateNumber ? "plateNumber-error" : undefined
             }
             className={inputCls}
-            placeholder="ABC-123"
+            placeholder="Enter Plate#"
           />
           {errors.plateNumber && (
             <p
@@ -153,7 +153,7 @@ export default function CarForm() {
               errors.chassisNumber ? "chassisNumber-error" : undefined
             }
             className={inputCls}
-            placeholder="VIN..."
+            placeholder="Enter VIN#"
           />
           {errors.chassisNumber && (
             <p

@@ -71,7 +71,7 @@ export default function PersonFormRadix({ onSubmit }: PersonFormRadixProps) {
             aria-invalid={!!errors.firstName}
             aria-describedby={errors.firstName ? "firstName-error" : undefined}
             className={inputCls}
-            placeholder="Jane"
+            placeholder="Enter first name"
           />
           {errors.firstName && (
             <p
@@ -96,7 +96,7 @@ export default function PersonFormRadix({ onSubmit }: PersonFormRadixProps) {
             aria-invalid={!!errors.lastName}
             aria-describedby={errors.lastName ? "lastName-error" : undefined}
             className={inputCls}
-            placeholder="Doe"
+            placeholder="Enter last name"
           />
           {errors.lastName && (
             <p
@@ -142,7 +142,7 @@ export default function PersonFormRadix({ onSubmit }: PersonFormRadixProps) {
             name="gender"
             render={({ field }) => (
               <Select.Root
-                value={field.value ?? ""} // "" keeps the placeholder visible
+                value={field.value ?? ""}
                 onValueChange={field.onChange}
               >
                 <Select.Trigger

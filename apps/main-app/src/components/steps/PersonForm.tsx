@@ -30,7 +30,7 @@ export default function PersonForm() {
             aria-invalid={!!errors.firstName}
             aria-describedby={errors.firstName ? "firstName-error" : undefined}
             className={inputCls}
-            placeholder="Jane"
+            placeholder="Enter First name"
           />
           {errors.firstName && (
             <p
@@ -53,7 +53,7 @@ export default function PersonForm() {
             aria-invalid={!!errors.lastName}
             aria-describedby={errors.lastName ? "lastName-error" : undefined}
             className={inputCls}
-            placeholder="Doe"
+            placeholder="Enter Last name"
           />
           {errors.lastName && (
             <p
@@ -98,7 +98,7 @@ export default function PersonForm() {
             aria-invalid={!!errors.gender}
             aria-describedby={errors.gender ? "gender-error" : undefined}
             className={inputCls}
-            placeholder="Female / Male / Other"
+            placeholder="Enter Gender (Female/Male/Other)"
           />
           {errors.gender && (
             <p

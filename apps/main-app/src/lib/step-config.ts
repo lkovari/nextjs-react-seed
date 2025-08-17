@@ -1,5 +1,5 @@
-import type { StepDefinition, FormData } from "./types";
-import { personSchema, addressSchema, carSchema } from "./schemas";
+import type { StepDefinition, FormData } from "@/lib/types";
+import { personSchema, addressSchema, carSchema } from "@/lib/schemas";
 import PersonForm from "@/components/steps/PersonForm";
 import AddressForm from "@/components/steps/AddressForm";
 import CarForm from "@/components/steps/CarForm";
