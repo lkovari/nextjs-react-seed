@@ -18,8 +18,13 @@ const links = [
   { name: "Controls", href: "/sandbox/controls", icon: CogIcon },
   { name: "Stepper", href: "/sandbox/stepper", icon: DocumentCheckIcon },
   {
-    name: "Radix based Forms",
+    name: "Forms with Radix",
     href: "/sandbox/radix-based-forms",
+    icon: UserCircleIcon,
+  },
+  {
+    name: "Forms with Shadcn",
+    href: "/sandbox/shadcn-based-forms",
     icon: UserCircleIcon,
   },
   { name: "Other", href: "/sandbox/other", icon: QuestionMarkCircleIcon },
