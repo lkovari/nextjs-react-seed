@@ -121,3 +121,45 @@ a {
   background-color: transparent !important;
   color: #E20074 !important;
 }
+@layer base {
+
+  /* Keep the disabled styling you already have */
+  button:disabled,
+  input:disabled,
+  select:disabled,
+  textarea:disabled {
+    cursor: not-allowed;
+    opacity: 0.60;
+  }
+
+  /* Only make POINTER for truly clickable non-input elements */
+  button:not(:disabled),
+  [role="button"],
+  a {
+    cursor: pointer;
+  }
+
+  /* Let inputs (including date) use the platform’s default cursor */
+  input,
+  textarea,
+  select {
+    cursor: auto;
+    /* important: don't force pointer here */
+  }
+
+  /* Restore native date picker UI if a reset disabled it */
+  input[type="date"] {
+    appearance: auto;
+    -webkit-appearance: auto;
+    /* Helps some themes where the indicator becomes invisible */
+    color-scheme: light dark;
+  }
+
+  /* Ensure the calendar icon is visible and clickable in WebKit */
+  input[type="date"]::-webkit-calendar-picker-indicator {
+    display: block;
+    opacity: 1;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+}
