@@ -6,6 +6,12 @@ type CountElapsedTimerProps = {
   /** Whether the timer should currently be running. */
   isRunning: boolean;
   /**
+   * Accumulated milliseconds from previous runs.
+   * While running, the displayed time is (baseMs + (now - start)).
+   * While stopped, the displayed time is baseMs.
+   */
+  baseMs?: number;
+  /**
    * Called when the timer transitions from running -> stopped.
    * Receives the final elapsed milliseconds for this run.
    */
@@ -36,40 +42,49 @@ function formatHMSms(ms: number): string {
 
 /**
  * CountElapsedTimer
- * - Resets to 00:00:00:000 every time it transitions to running.
- * - Tracks elapsed using Date.now().
- * - Provides formatted time to parent via a render prop.
+ * - Shows `baseMs` when stopped.
+ * - When starting, continues from `baseMs` and adds live delta.
+ * - Uses rAF for smooth updates, throttled by `tickRateMs`.
  */
 export default function CountElapsedTimer({
   isRunning,
+  baseMs = 0,
   onStop,
-  tickRateMs = 50, // faster tick for ms display
+  tickRateMs = 50,
   children,
 }: CountElapsedTimerProps) {
   const startRef = useRef<number | null>(null);
-  const [elapsedMs, setElapsedMs] = useState<number>(0);
+  const [elapsedMs, setElapsedMs] = useState<number>(baseMs);
 
   const rafRef = useRef<number | null>(null);
   const lastTickRef = useRef<number>(0);
   const wasRunningRef = useRef<boolean>(false);
 
+  // Keep displayed time in sync with baseMs when not running or after reset.
+  useEffect(() => {
+    if (!isRunning) {
+      setElapsedMs(Math.max(0, baseMs));
+    }
+  }, [baseMs, isRunning]);
+
   useEffect(() => {
     const wasRunning = wasRunningRef.current;
 
     if (!wasRunning && isRunning) {
+      // Transition: Stopped -> Running
       startRef.current = Date.now();
-      setElapsedMs(0);
       lastTickRef.current = 0;
       loop();
     }
 
     if (wasRunning && !isRunning) {
+      // Transition: Running -> Stopped
       cancelLoop();
+      const start = startRef.current;
       const finalMs =
-        startRef.current !== null ? Date.now() - startRef.current : elapsedMs;
-      const clamped = Math.max(0, finalMs);
-      setElapsedMs(clamped);
-      onStop?.(clamped, formatHMSms(clamped));
+        start !== null ? Math.max(0, baseMs + (Date.now() - start)) : baseMs;
+      setElapsedMs(finalMs);
+      onStop?.(finalMs, formatHMSms(finalMs));
       startRef.current = null;
     }
 
@@ -79,18 +94,19 @@ export default function CountElapsedTimer({
       cancelLoop();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [isRunning]);
+  }, [isRunning, baseMs]);
 
   const loop = () => {
     cancelLoop();
     const step = () => {
       rafRef.current = requestAnimationFrame(step);
+
       const start = startRef.current;
       if (start === null) return;
 
       const now = Date.now();
       if (now - lastTickRef.current >= tickRateMs) {
-        const ms = Math.max(0, now - start);
+        const ms = Math.max(0, baseMs + (now - start));
         setElapsedMs(ms);
         lastTickRef.current = now;
       }

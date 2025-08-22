@@ -6,7 +6,7 @@ import Sidebar from "../components/Sidebar";
 import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
-const lastUpdateDate = "2025.08.22. 07:29 PM";
+const lastUpdateDate = "2025.08.22. 07:57 PM";
 export const metadata: Metadata = {
   title: "NextJS Playground",
   description: "Demo project",
