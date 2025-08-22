@@ -7,6 +7,7 @@ import {
   QuestionMarkCircleIcon,
   DocumentCheckIcon,
   UserCircleIcon,
+  ClockIcon,
 } from "@heroicons/react/24/outline";
 import clsx from "clsx";
 import Link from "next/link";
@@ -14,6 +15,7 @@ import { usePathname } from "next/navigation";
 
 const links = [
   { name: "Data Input", href: "/sandbox/data-input", icon: GiftIcon },
+  { name: "Elapsed Time", href: "/sandbox/elapsed-time", icon: ClockIcon },
   { name: "Cross Field", href: "/sandbox/cross-field", icon: CubeIcon },
   { name: "Controls", href: "/sandbox/controls", icon: CogIcon },
   { name: "Stepper", href: "/sandbox/stepper", icon: DocumentCheckIcon },
