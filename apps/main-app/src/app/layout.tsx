@@ -6,7 +6,7 @@ import Sidebar from "../components/Sidebar";
 import Image from "next/image";
 
 const inter = Inter({ subsets: ["latin"] });
-const lastUpdateDate = "2025.08.22. 07:57 PM";
+const lastUpdateDate = "2026.01.11. 10:38 PM";
 export const metadata: Metadata = {
   title: "NextJS Playground",
   description: "Demo project",
@@ -72,7 +72,7 @@ function Header() {
 function Footer() {
   return (
     <footer className="bg-gray-100 dark:bg-gray-800 text-center py-2 text-sm text-gray-800 dark:text-gray-300 mt-auto">
-      © 2025 László Kővári — Built with <a href="https://nextjs.org">Next.js</a>
+      © 2026 László Kővári — Built with <a href="https://nextjs.org">Next.js</a>
     </footer>
   );
 }
