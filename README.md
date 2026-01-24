@@ -8,7 +8,7 @@ I chose **Turborepo** because it provides the flexibility to easily extend this 
 
 ---
 
-## 🌐 Deployed Site
+## Deployed Site
 
 [https://nextjs-react-seed-main-app.vercel.app/](https://nextjs-react-seed-main-app.vercel.app/)
 
@@ -112,7 +112,7 @@ pnpm clean
 
 ---
 
-## 🚀 Deploy to Vercel
+## Deploy to Vercel
 
 ### Prerequisites
 
@@ -398,7 +398,7 @@ For more deployment options and details, check out the [Next.js deployment docum
 
 ---
 
-## ✅ TODO
+## TODO
 
 ### 🔧 Fixes & Improvements
 
