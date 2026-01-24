@@ -421,5 +421,3 @@ For more deployment options and details, check out the [Next.js deployment docum
 - [ ] Comparison: `biome.js` vs `eslint`
 - [ ] Integrating `react-hook-form` with `@hookform/resolvers`
 
-
----
