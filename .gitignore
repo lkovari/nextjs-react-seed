@@ -17,3 +17,12 @@ out/
 **/.turbo/**/*.cookie
 **/.turbo/turbo-build.log
 **/.turbo/**/turbo-build.log
+
+# pnpm and other caches
+.pnpm-store/
+
+# Next / Vercel / tooling
+.vercel/
+.eslintcache
+*.tsbuildinfo
+.cache/
